@@ -17,6 +17,7 @@ public class Lez03 {
         int intNumero = 10;
         String strTesto = "Prova";
         
+        
         System.out.println("numero " + intNumero);
         System.out.println("testo " + strTesto);
                 
