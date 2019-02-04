@@ -19,7 +19,7 @@ a{
 /*quando si clicca*/
 a:active{
     border-radius: 20px;
-    border: solid 1px magenta;
+    border: solid 1px red;
 }
 
 a:hover{
