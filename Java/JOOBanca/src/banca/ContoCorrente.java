@@ -20,7 +20,8 @@ public class ContoCorrente {
     private final String intestatario;
     private double saldo;
     private List<Double> movimenti = new ArrayList<>();
-
+    private static float interesse = 0.04f;
+    
     public ContoCorrente(int numero, String intestatario) {
         this.numero = numero;
         this.intestatario = intestatario;
@@ -63,6 +64,12 @@ public class ContoCorrente {
                 .filter(movimento -> movimento>0) //filtra quelli che sono > 0
                 .limit(num) //ne prende solo i primi n
                 .collect(Collectors.toList()); //restituisce una lista
+    }
+    public static void modificaInteresse (float valore) {
+        if (valore <0) {
+            throw new IllegalArgumentException("Ineresse negativo non valido");
+        }
+        interesse = valore;
     }
 
 }

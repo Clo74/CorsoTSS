@@ -76,9 +76,12 @@
     overflow: hidden;
     background-color: lightblue;
 }
-#astronave {
-    border: dotted 1px red;
+#astronave1, #astronave2, #astronave3 {
+    border: dotted 1px black;
     position: relative;
     top: 0px;
     left: 0px;
+}
+#sentinella {
+    position:relative;
 }

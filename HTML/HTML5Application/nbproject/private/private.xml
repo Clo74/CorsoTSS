@@ -5,6 +5,8 @@
         <group/>
         <group name="HTML">
             <file>file:/home/tss/Claudia/HTML/HTML5Application/public_html/astronave3/giocoAstronave3.html</file>
+            <file>file:/home/tss/Claudia/HTML/HTML5Application/public_html/index.html</file>
+            <file>file:/home/tss/Claudia/HTML/HTML5Application/public_html/astronave3/cssGiocoAstronave3.css</file>
             <file>file:/home/tss/Claudia/HTML/HTML5Application/public_html/astronave3/jsGiocoAstronave3.js</file>
         </group>
     </open-files>
