@@ -56,7 +56,7 @@ public class Sim {
     public int getMinTot(){
         int minTot=0;
         for (Telefonate telefonate : traffico) {
-            minTot+=telefonate.getMinuti();
+            minTot+=telefonate.minuti;
         }
         
         return minTot;
@@ -69,7 +69,7 @@ public class Sim {
     
     public long telefVersoNr (String num) {
         
-        return traffico.stream().filter(t -> t.getTelChiamato().equals(num)).count();
+        return traffico.stream().filter(t -> t.telChiamato.equals(num)).count();
         
     }
     
@@ -81,7 +81,7 @@ public class Sim {
         app.append("Telefono: ").append(this.nrTel).append(" credito: ").append(this.credito).append(" costo al minuto: ").append(this.cosMin);
         app.append("\n --------------------");
         
-        this.traffico.stream().forEach(t -> app.append("\n Nr.Chiamato:").append(t.getTelChiamato()).append(" durata:").append(t.getMinuti()) );
+        this.traffico.stream().forEach(t -> app.append("\n Nr.Chiamato:").append(t.telChiamato).append(" durata:").append(t.minuti) );
         return app.toString();
     }
 
@@ -97,17 +97,7 @@ public class Sim {
             this.costo = costo;
         }
 
-        public String getTelChiamato() {
-            return telChiamato;
-        }
 
-        public int getMinuti() {
-            return minuti;
-        }
-
-        public double getCosto() {
-            return costo;
-        }
 
     }
 
