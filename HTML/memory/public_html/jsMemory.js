@@ -76,6 +76,9 @@ function giraTess() {
      */
     let uguali = false;
     this.innerHTML = this.tessera;
+    if (this.selezionata == "X") 
+        return;
+    
     //selezionata contine "" quando non è girata X quando è una delle ultime selezionate O quando ho trovato due uguali
     if (tessera1 == "") {
         tessera1 = this.tessera;
