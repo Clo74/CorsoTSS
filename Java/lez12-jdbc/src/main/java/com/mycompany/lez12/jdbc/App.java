@@ -22,6 +22,8 @@ public class App {
     
     private final static String DRIVER="org.mariadb.jdbc.Driver";
     //private final static String URL="jdbc:mariadb://localhost:3306/classicmodels";
+    // jdbc sempre fisso mysql tipo di db etc.. il formato dell'url lo trovo nella documentazione
+    //del driver
     private final static String URL="jdbc:mysql://localhost:3306/classicmodels";
     private final static String USR="root";
     private final static String PWD="ghiglieno";
@@ -51,6 +53,9 @@ public class App {
             ResultSet risultato = cmd.executeQuery("select * from customers " 
                     + " where customerName like '" + ricerca + "%' order by customername");
             System.out.println("----------- Clienti trovati ---------------------------");
+            /*metodo next restituisce vero se ho ancora righe
+            all'inizio sono prima della prima riga, facendo subito next mi trovo sulla
+            prima*/
             while (risultato.next()) {
                 String name = risultato.getString("customerName");
                 System.out.println(name);
